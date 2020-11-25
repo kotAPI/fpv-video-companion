@@ -11,5 +11,11 @@
   "devDependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
     "fluent-ffmpeg": "^2.1.2"
+  },
+  "dependencies": {
+    "cli-progress": "^3.8.2",
+    "ffmpeg-on-progress": "^1.0.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1"
   }
 }
