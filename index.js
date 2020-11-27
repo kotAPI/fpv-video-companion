@@ -85,14 +85,9 @@ progressInstances[ID].start(100, 0, {
 
 cutVideo(section)
 
-
-
-
   /*
     // NOTES //
-
     Learn what mux, demux is
-    
     =======================
     References :-
     =======================
