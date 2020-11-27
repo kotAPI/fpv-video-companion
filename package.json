@@ -25,5 +25,8 @@
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }

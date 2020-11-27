@@ -15,10 +15,10 @@ const durationUtils = require("./utils/duration")
 ffmpeg.setFfmpegPath(ffmpegPath)
 
 var section = {
-  source_video: 'video_in.mp4',
+  source_video: 'source.mp4',
   destination_video: 'testing.mp4',
-  startTime:"00:02:55",
-  endTime:"00:03:01"
+  startTime:"00:01:00",
+  endTime:"00:01:04"
 }
 
 let progressInstances = {}
@@ -53,6 +53,8 @@ progressInstances[ID].start(100, 0, {
       console.log('')
       console.log(`CONVERSION DONE! Video saved at  ${section.destination_video}`)
       console.log('')
+    }else{
+      console.log(err)
     }
 
     multibar.stop();
