@@ -47,7 +47,7 @@ async function cutVideo(section) {
         console.log(err)
       }
 
-      
+
     })
     .on('progress', (progress) => {
 
@@ -80,26 +80,41 @@ var multibar = new cliProgress.MultiBar({
 }, cliProgress.Presets.shades_grey);
 
 
-var start = async()=>{
-
-  
-var sections = [{
-  source_video: 'source.mp4',
-  destination_video: 'testing.mp4',
-  startTime: "00:01:00",
-  endTime: "00:01:04"
-},{
-  source_video: 'source.mp4',
-  destination_video: 'testing2.mp4',
-  startTime: "00:01:05",
-  endTime: "00:01:10"
-}]
+var start = async () => {
 
 
-  _.forEach(sections,async(section)=>{
+  var sections = [{
+    source_video: 'GH011493.mp4',
+    destination_video: 'look_at_mini_crane.mp4',
+    startTime: "00:00:49",
+    endTime: "00:00:54"
+  },
+  {
+    source_video: 'GH011493.mp4',
+    destination_video: 'wall_run_building_1.mp4',
+    startTime: "00:01:15",
+    endTime: "00:01:19"
+  },
+  {
+    source_video: 'GH011493.mp4',
+    destination_video: 'building_dive_tiny_1.mp4',
+    startTime: "00:01:36",
+    endTime: "00:01:42"
+  },
+  {
+    source_video: 'GH011493.mp4',
+    destination_video: 'power_loop_dive_1.mp4',
+    startTime: "00:01:46",
+    endTime: "00:01:52"
+  }
+
+]
+
+
+  _.forEach(sections, async (section) => {
     await cutVideo(section)
   })
-  
+
   console.log("ALL DONE")
   multibar.stop();
 }
